@@ -1,0 +1,184 @@
+/* Main container styling */
+.main {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../fitbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(0.7);
+}
+
+/* Marquee Styling */
+.main_1 {
+    background-color: rgba(224, 118, 118, 0.8);
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Header Section */
+.head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.head img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.head_1 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    flex: 1;
+    margin: 0 15px;
+}
+
+/* Workout Section */
+.main h2 {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Exercise Card Container */
+.contain {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 100px; /* Increased gap between cards */
+    max-width: 1000px;
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Exercise Card Styling */
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    max-width: 200px;
+    padding: 12px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 6px 0;
+}
+
+.card p {
+    font-size: 12px;
+    color: #666;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 70px;
+    overflow-y: auto;
+    margin-top: 6px;
+    border-top: 1px solid #ddd;
+    padding-top: 6px;
+}
+
+.card ul li::before {
+    content: "✔"; /* Checkmark icon */
+    color: green;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.card ul {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 5px;
+    max-height: 80px;
+    overflow-y: auto;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .head {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .head img {
+        width: 120px;
+        margin-bottom: 8px;
+    }
+    
+    .head_1 {
+        font-size: 16px;
+        margin: 8px 0;
+    }
+    
+    .contain {
+        gap: 60px; /* Adjusted gap for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .main_1 {
+        font-size: 14px;
+        padding: 6px;
+    }
+    
+    .head_1 {
+        font-size: 14px;
+    }
+    
+    .card {
+        max-width: 85%;
+    }
+    
+    .contain {
+        gap: 40px; /* Increased gap for very small screens */
+    }
+}

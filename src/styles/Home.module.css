@@ -1,0 +1,33 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.bmi{
+    width: 50%;
+    background-color: black;
+    padding: 5%;
+}
+.fitness{
+    width: 50%;
+    background-color: red;
+}
+h1,h2,p{
+   color: white;
+}
+.bmi_first{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: start;
+}
+#inp{
+    width: 300px;
+}
+.fitness{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

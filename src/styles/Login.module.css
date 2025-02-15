@@ -1,0 +1,25 @@
+.login{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+input{
+    float: right;
+    width: 250px;
+}
+label{
+    width: 150px;
+    float: left;
+}
+.login_1{
+    color: black;
+    text-align: center;
+}
