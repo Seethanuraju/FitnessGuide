@@ -10,7 +10,7 @@ function Fitness() {
         {
           method: 'GET',
           headers: {
-            'x-rapidapi-key': '47a61ca358msh33ccc470b003e1dp1fd19fjsne24ec61c8054', 
+            'x-rapidapi-key': 'API_KEY', 
             'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
           }
         }
